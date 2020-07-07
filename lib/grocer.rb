@@ -30,5 +30,11 @@ grocery_shelf = [
   { :item => "HOT SAUCE", :price => 1.75, :clearance => false }
 ]
 
+unconsolidated_cart = [
+  {:item => "AVOCADO", :price => 3.00, :clearance => true },
+  {:item => "AVOCADO", :price => 3.00, :clearance => true },
+  {:item => "KALE", :price => 3.00, :clearance => false}
+]
+
 #find_item_by_name_in_collection("CANNED BEANS",grocery_shelf)
-  
+consolidate_cart(unconsolidated_cart)
