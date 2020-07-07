@@ -23,17 +23,14 @@ def consolidate_cart(cart)
   consolidated_cart.each do |hash1|
     hash1[:count] = 0
   end  
-  #puts consolidated_cart
   consolidated_cart.each do |hash2|
-    #puts hash2[:item]
     cart.each do |hash3|
-      #puts hash3[:item]
       if hash2[:item] == hash3[:item]
         hash2[:count] += 1
       end  
     end  
   end
-  puts consolidated_cart
+  return consolidated_cart
 end
 
 grocery_shelf = [
@@ -51,4 +48,4 @@ unconsolidated_cart = [
 ]
 
 #find_item_by_name_in_collection("CANNED BEANS",grocery_shelf)
-consolidate_cart(unconsolidated_cart)
+#consolidate_cart(unconsolidated_cart)
