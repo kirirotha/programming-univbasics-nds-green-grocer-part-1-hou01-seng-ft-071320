@@ -20,7 +20,11 @@ def consolidate_cart(cart)
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   consolidated_cart = cart.uniq
+  consolidated_cart.each do |hash1|
+    hash1 << {:count => 0}
+  end  
   puts consolidated_cart
+  
 end
 
 grocery_shelf = [
