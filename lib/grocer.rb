@@ -22,7 +22,6 @@ def consolidate_cart(cart)
   consolidated_cart = cart.uniq
   consolidated_cart.each do |hash1|
     hash1[:count] = 0
-    puts hash1
   end  
   puts consolidated_cart
   
