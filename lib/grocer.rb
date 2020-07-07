@@ -2,7 +2,16 @@ def find_item_by_name_in_collection(name, collection)
   # Implement me first!
   #
   # Consult README for inputs and outputs
-
+  found_item = {}
+  collection.each do |hash1|
+    if name == hash1[:item]
+      found_item = hash1
+    end
+  end
+  if found_item == {}
+    return nil
+  end
+  return found_item
 end
 
 def consolidate_cart(cart)
@@ -13,5 +22,13 @@ def consolidate_cart(cart)
 
 end
 
+grocery_shelf = [
+  { :item => "CANNED BEANS", :price => 3.00, :clearance => true },
+  { :item => "CANNED CORN", :price => 2.50, :clearance => false },
+  { :item => "SALSA", :price => 1.50, :clearance => false },
+  { :item => "TORTILLAS", :price => 2.00, :clearance => false },
+  { :item => "HOT SAUCE", :price => 1.75, :clearance => false }
+]
 
+#find_item_by_name_in_collection("CANNED BEANS",grocery_shelf)
   
