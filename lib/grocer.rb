@@ -27,9 +27,13 @@ def consolidate_cart(cart)
   consolidated_cart.each do |hash2|
     #puts hash2[:item]
     cart.each do |hash3|
-      puts hash3[:item]
+      #puts hash3[:item]
+      if hash2[:item] == hash3[:item]
+        hash2[:count] ++
+      end  
     end  
-  end  
+  end
+  puts consolidated_cart
 end
 
 grocery_shelf = [
