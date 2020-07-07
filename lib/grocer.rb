@@ -21,7 +21,7 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   consolidated_cart = cart.uniq
   consolidated_cart.each do |hash1|
-    hash1 << {:count => 0}
+    hash1.push = {:count => 0}
   end  
   puts consolidated_cart
   
