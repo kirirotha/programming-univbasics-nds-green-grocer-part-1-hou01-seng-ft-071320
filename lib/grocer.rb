@@ -25,7 +25,7 @@ def consolidate_cart(cart)
   end  
   #puts consolidated_cart
   consolidated_cart.each do |hash2|
-    puts hash1[:item]
+    puts hash2[:item]
     cart.each do |hash3|
       
     end  
